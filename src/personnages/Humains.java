@@ -4,26 +4,17 @@ public class Humains {
 	private String nom;//nom de l'humain
 	private String boisson;//boisson favorite de l'humain
 	private int argent;//argent du l'humain
-	private int minArgent =0;//argent minimum initial
-	private int maxArgent =100;//argent maximal initial
-	public String getNom() {
+
+	public void Humains(String nom,String boisson,int argent ){
+		this.nom=nom;
+		this.boisson=boisson;
+		this.argent=argent;
+	}
+	public String getNom(){
 		return nom;
 	}
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
-	public String getBoisson() {
+	public String getBoisson(){
 		return boisson;
-	}
-	public void setBoisson(String boisson) {
-		this.boisson = boisson;
-	}
-	public int getArgent() {
-		return argent;
-	}
-	public void setArgent() {
-		this.argent = ThreadLocalRandom.current().nextInt(minArgent,maxArgent+1); 
-
 	}
 	public void parler(String texte) {
 		System.out.println( "«" + texte + "»");
