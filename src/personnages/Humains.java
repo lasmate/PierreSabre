@@ -34,8 +34,21 @@ public class Humains {
 		this.parler("Mmmm, un bon verre de "+boisson+"! GLOUPS!");
 	}
 	public void acheter(String bien, int prix) {
+		if (this.argent<prix){
+			this.parler("Je n'ai pas assez d'argent pour acheter ce " + bien + "!");
+		}
+		else {
+			this.parler("J'achète ce " + bien + " pour " + prix + " pièces d'or.");
+			this.perdreArgent(prix);
+		}
+	}
+	public void gagnerArgent(int gain) {
+		this.argent= argent + gain;
+	}
+	public void perdreArgent(int perte ) {
+		this.argent= argent - perte;
+	}
+	public static void main() {
 		
 	}
-	
-	
 }
