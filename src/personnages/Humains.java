@@ -38,7 +38,7 @@ public class Humains {
 			this.parler("Je n'ai pas assez d'argent pour acheter ce " + bien + "!");
 		}
 		else {
-			this.parler("J'achète ce " + bien + " pour " + prix + " pièces d'or.");
+			this.parler("J'achète ce " + bien + " pour " + prix );
 			this.perdreArgent(prix);
 		}
 	}
